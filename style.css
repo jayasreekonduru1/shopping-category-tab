@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+  padding: 60px;
+}
+.heading{
+  text-align: center;
+  font-weight: 800;
+}
+.container {
+  max-width: 1400px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 700px;
+  background-color: #eeeeee;
+  border-radius: 8px;
+}
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+  width:33.3%;
+  text-align: center;
+}
+.tab.active {
+  border-bottom: 2px solid #333;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+}
+.product-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.product-card {
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;  
+  border-radius: 8px;
+  flex: 0 0 auto; 
+}
+
+.product-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #fff;
+  color: #000;
+  padding: 5px;
+  margin: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  width: 130px;
+  text-align: center;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.title-vendor {
+  font-size: 16px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-title {
+  white-space: nowrap; 
+  overflow: hidden;    
+  text-overflow: ellipsis;  
+  max-width: 150px;
+  font-weight: 600;  
+  font-size: 18px;
+}
+
+
+.vendor-name {
+  white-space: normal; 
+  margin-left: 2px;  
+}
+
+.pricing-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.compare-at-price {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.discount {
+  color: red;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+
+@media (max-width: 1024px) {
+ .product-cards {
+      flex-wrap: wrap;
+  }
+ .product-card {
+      width: calc(33.33% - 20px);
+  }
+}
+@media (max-width: 767px) {
+ .product-cards {
+      flex-wrap: wrap;
+  }
+ .product-card {
+      width: calc(50% - 20px);
+  }
+  .tabs {
+    width: calc(60% - 20px)
+  }
+  .heading{
+    font-size: 17px;
+  }
+}
+@media (max-width: 440px) {
+  .product-cards {
+       flex-wrap: wrap;
+   }
+  .product-card {
+       width: calc(80% - 20px);
+   }
+   .tabs {
+     width: 300px;
+   }
+   .heading{
+     font-size: 17px;
+   }
+ }
